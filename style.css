@@ -1,0 +1,73 @@
+/* General Page Styling */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2c3e50; /* Dark blue-grey background */
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* The Game Info Section */
+#game-info {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* The Board Grid */
+#board {
+    display: grid;
+    grid-template-columns: repeat(8, 60px);
+    grid-template-rows: repeat(8, 60px);
+    border: 5px solid #34495e;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* The Squares */
+.cell {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.black-sq { background-color: #769656; } /* Green squares */
+.white-sq { background-color: #eeeed2; } /* Cream squares */
+
+/* The Checkers Pieces */
+.piece {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.piece:hover {
+    transform: scale(1.1);
+}
+
+.red-p { 
+    background: radial-gradient(circle at 30% 30%, #ff4d4d, #990000); 
+    border: 2px solid #5e0000;
+}
+
+.black-p { 
+    background: radial-gradient(circle at 30% 30%, #555, #111); 
+    border: 2px solid #000;
+}
+
+/* King Styling */
+.king::after {
+    content: '👑';
+    font-size: 20px;
+}
+
+/* Highlight for Selected Piece */
+.selected {
+    outline: 4px solid #f1c40f;
+    outline-offset: 2px;
+}
